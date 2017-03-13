@@ -32,9 +32,16 @@ public class StackTest {
 		
 	}
        public static void main(String[] args) {
-           System.out.println(StackTest.check("()]")); 
-         System.out.println(StackTest.check("[()]"));   // true
-         System.out.println(StackTest.check("([(([[(([]))]]))])")); // true
+          System.out.println(StackTest.check("[()]"));   // true
+System.out.println(StackTest.check("(()[])")); // true
+System.out.println(StackTest.check("([)]"));   // false
+System.out.println(StackTest.check("(("));     // false
+System.out.println(StackTest.check("[(()])")); // false
+
+System.out.println(StackTest.check("([(([[(([]))]]))])"));   // true
+System.out.println(StackTest.check("[](()()[[]])()[]([])")); // true
+System.out.println(StackTest.check("([((([(([]))])))))])")); // false
+System.out.println(StackTest.check("[](()()[[]])[][[([])")); // false
 
     
     }
